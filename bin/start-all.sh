@@ -17,8 +17,9 @@
 
 
 # Start all hadoop daemons.  Run this on master node.
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
-export HADOOP_HOME=/users/daniar/hadoop
+
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export HADOOP_HOME=/home/ubuntu/hadoop
 
 bin=`dirname "$0"`
 bin=`cd "$bin"; pwd`

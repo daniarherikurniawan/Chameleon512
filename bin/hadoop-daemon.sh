@@ -27,8 +27,8 @@
 #   HADOOP_IDENT_STRING   A string representing this instance of hadoop. $USER by default
 #   HADOOP_NICENESS The scheduling priority for daemons. Defaults to 0.
 ##
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
-export HADOOP_HOME=/users/daniar/hadoop
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export HADOOP_HOME=/home/ubuntu/hadoop
 
 usage="Usage: hadoop-daemon.sh [--config <conf-dir>] [--hosts hostlistfile] (start|stop) <hadoop-command> <args...>"
 

@@ -20,7 +20,7 @@
 
 	<property>
 	  <name>mapred.hosts.exclude</name>
-	  <value>/users/daniar/hadoop/conf/exclude</value>
+	  <value>/home/ubuntu/hadoop/conf/exclude</value>
 	  <description>Names a file that contains the list of hosts that
 	  should be excluded by the jobtracker.  If the value is empty, no
 	  hosts are excluded.</description>

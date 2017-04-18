@@ -18,7 +18,9 @@
 # also should not be passed any arguments, since we need original $*
 
 # resolve links - $0 may be a softlink
-export HADOOP_HOME=/users/daniar/hadoop
+
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export HADOOP_HOME=/home/ubuntu/hadoop
 
 this="$0"
 while [ -h "$this" ]; do

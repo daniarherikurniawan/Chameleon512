@@ -2,15 +2,16 @@
 # executed at /users/daniar/
 
 # Set env variables
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/
-export HADOOP_HOME=~/hadoop
+
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export HADOOP_HOME=/home/ubuntu/hadoop
 
 # Prepare temp folder
 sudo mkdir -p /tmp/hadoop-ucare /tmp/hadoop-core 
 sudo chown -R $USER:cs331-uc /tmp/hadoop-ucare /tmp/hadoop-core 
 sudo chmod -R 775 /tmp/hadoop-ucare /tmp/hadoop-core 
 
-DIR=/users/daniar/hadoop
+DIR=/home/ubuntu/hadoop
 if [ -d "$DIR" ]; then
     printf '%s\n' "Removing Lock ($DIR)"
     rm -rf "$DIR"
@@ -21,7 +22,7 @@ cd hadoop
 git init
 
 # Fetching codes from github
-git remote add ucare-github-dan https://github.com/daniarherikurniawan/Chameleon512.git
+git remote add ucare-github-dan https://github.com/daniarherikurniawan/hadoop-0.20.git
 git pull ucare-github-dan master --depth=20
 git checkout master
 

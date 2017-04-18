@@ -2,8 +2,9 @@
 # executed at /users/daniar/
 
 # Set env variables
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/
-export HADOOP_HOME=/users/daniar/hadoop
+
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export HADOOP_HOME=/home/ubuntu/hadoop
 
 # Prepare temp folder
 sudo mkdir -p /tmp/hadoop-ucare /tmp/hadoop-core 
@@ -27,7 +28,7 @@ sudo chmod -R 775 /tmp/hadoop-ucare /tmp/hadoop-core
 # echo All subshells scanning ssh fingerprints are finished
 
 # switching the directory
-# cd /users/daniar/hadoop
+# cd /home/ubuntu/hadoop
 
 # format namenode before using it
 # bin/hadoop namenode -format
