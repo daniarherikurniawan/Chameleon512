@@ -3,7 +3,7 @@
 
 # Set env variables
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/
-export HADOOP_HOME=/users/daniar/hadoop
+export HADOOP_HOME=~/hadoop
 
 # Prepare temp folder
 sudo mkdir -p /tmp/hadoop-ucare /tmp/hadoop-core 
@@ -21,7 +21,7 @@ cd hadoop
 git init
 
 # Fetching codes from github
-git remote add ucare-github-dan https://github.com/daniarherikurniawan/hadoop-0.20.git
+git remote add ucare-github-dan https://github.com/daniarherikurniawan/Chameleon512.git
 git pull ucare-github-dan master --depth=20
 git checkout master
 

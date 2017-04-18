@@ -5,12 +5,12 @@ setting :
 once you download it, put it into your /.ssh/ dir, and then add these lines to your /.ssh/config
 
 Host cc214
-
   Hostname 130.202.88.214
   User cc
   IdentityFile ~/.ssh/ucare-chameleon.pem
   UserKnownHostsFile /dev/null
   StrictHostKeyChecking no
+
 then, do this to get into my VM,
 
 ssh cc214
