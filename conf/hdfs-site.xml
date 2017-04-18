@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+<configuration>
+	<property>
+	  <name>dfs.replication</name>
+	  <value>3</value>
+	  <description>Default block replication.
+	  The actual number of replications can be specified when the file is created.
+	  The default is used if replication is not specified in create time.
+	  </description>
+	</property>
+
+	<property>
+	  <name>dfs.name.dir</name>
+	  <value>/tmp/hadoop-ucare/dfs/name</value>
+	</property>
+	<property>
+	  <name>dfs.data.dir</name>
+	  <value>/tmp/hadoop-ucare/dfs/data</value>
+	</property>
+
+
+	<property>
+	  <name>dfs.hosts.exclude</name>
+	  <value>/users/daniar/hadoop/conf/exclude</value>
+	  <description>Names a file that contains a list of hosts that are
+	  not permitted to connect to the namenode.  The full pathname of the
+	  file must be specified.  If the value is empty, no hosts are
+	  excluded.</description>
+	</property> 
+
+
+	<property>
+	  <name>dfs.block.size</name>
+	  <value>4096</value>
+	  <!-- <value>67108864</value> -->
+	  <description>The default block size for new files.</description>
+	</property>
+
+	<property>
+	  <name>dfs.blockreport.intervalMsec</name>
+	  <value>3600000</value>
+	  <description>Determines block reporting interval in milliseconds.</description>
+	</property>
+
+	<property>
+	  <name>dfs.blockreport.initialDelay</name>  <value>0</value>
+	  <description>Delay for first block report in seconds.</description>
+	</property>
+
+	<!-- DAN: add configuration -->
+	<property>
+	  <name>dfs.blockreport.startTimeRefference</name>
+	  <value></value>
+	  <description>Determines block reporting interval in milliseconds.</description>
+	</property>
+
+
+</configuration>
+
+<!-- <configuration>
+	<property>
+		<name>dfs.replication</name>
+		<value>1</value>
+	</property>
+</configuration> -->
+
+<!-- 
+<configuration>
+	<property>
+	  <name>dfs.name.dir</name>
+	  <value>file:///app/hadoop/tmp/dfs/name</value>
+	</property>
+	<property>
+	  <name>dfs.data.dir</name>
+	  <value>file:///app/hadoop/tmp/dfs/data</value>
+	</property>
+	<property>
+	  <name>dfs.replication</name>
+	  <value>1</value>
+	  <description>Default block replication.
+	  The actual number of replications can be specified when the file is created.
+	  The default is used if replication is not specified in create time.
+	  </description>
+	</property>
+</configuration>
+ -->

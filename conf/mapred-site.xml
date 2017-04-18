@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+<configuration>
+
+	<property>
+	  <name>mapred.job.tracker</name>
+	  <value>node-0.hadoopcluster.cs331-uc.emulab.net:54311</value>
+	  <description>The host and port that the MapReduce job tracker runs
+	  at.  If "local", then jobs are run in-process as a single map
+	  and reduce task.
+	  </description>
+	</property>
+
+	<property>
+		<name>mapred.local.dir</name>
+		<value>/tmp/hadoop-ucare/mapred</value>
+	</property>
+
+	<property>
+	  <name>mapred.hosts.exclude</name>
+	  <value>/users/daniar/hadoop/conf/exclude</value>
+	  <description>Names a file that contains the list of hosts that
+	  should be excluded by the jobtracker.  If the value is empty, no
+	  hosts are excluded.</description>
+	</property>
+
+</configuration>
+
+<!-- <configuration>
+	<property>
+		<name>mapred.job.tracker</name>
+		<value>localhost:9001</value>
+	</property>
+</configuration> -->
+
+<!-- <configuration>
+	<property>
+	  <name>mapred.job.tracker</name>
+	  <value>localhost:54311</value>
+	  <description>The host and port that the MapReduce job tracker runs
+	  at.  If "local", then jobs are run in-process as a single map
+	  and reduce task.
+	  </description>
+	</property>
+</configuration>
+
+ -->
