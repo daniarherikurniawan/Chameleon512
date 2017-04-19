@@ -68,6 +68,8 @@ $ sudo chmod 750 /app/hadoop/tmp
 
 source .bash_profile
 
+source /home/ubuntu/hadoop-2.7.1/psbin/ucare_se-rc.sh
+
 bin/hadoop dfs -copyFromLocal gutenberg /gutenberg
 
 ================= MAPREDUCE JOB ===================
@@ -229,3 +231,40 @@ bin/hadoop fsck -racks
 ssh pc294.emulab.net -v
 https://www.emulab.net/gensslcert.php3?user=87860
 re generate id_rsa through the EMulab UI and extract private and pubkey from .pem
+
+
+ubuntu@node-0:~/hadoop$ export -p
+export HADOOP_CLASSPATH="/usr/lib/jvm/java-7-openjdk-amd64/lib/tools.jar"
+export HADOOP_CONF_DIR="/home/ubuntu/hadoop-2.7.1/psbin/ucare_se_conf/hadoop-0.12.4-dev-conf"
+export HADOOP_HOME="/home/ubuntu/hadoop"
+export HADOOP_LOG_DIR="/tmp/hadoop-ucare/logs/hadoop"
+export HADOOP_MAPRED_LOG_DIR="/tmp/hadoop-ucare/logs/mapred"
+export HADOOP_PREFIX="/home/ubuntu/hadoop-2.7.1/build/hadoop-0.12.4-dev"
+export HOME="/home/ubuntu"
+export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
+export LANG="en_US.UTF-8"
+export LOGNAME="ubuntu"
+export MAIL="/var/mail/ubuntu"
+export OLDPWD="/home/ubuntu"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PR="/home/ubuntu/hadoop-2.7.1/psbin/../.."
+export PSBIN="/home/ubuntu/hadoop-2.7.1/psbin"
+export PWD="/home/ubuntu/hadoop"
+export SHELL="/bin/bash"
+export SHLVL="1"
+export SSH_CLIENT="10.1.3.5 59676 22"
+export SSH_CONNECTION="10.1.3.5 59676 10.1.3.6 22"
+export SSH_TTY="/dev/pts/0"
+export SWIMDIR="/home/ubuntu/hadoop-2.7.1/psbin/../../SWIM"
+export TERM="xterm-256color"
+export TESTDIR="/home/ubuntu/hadoop-2.7.1/psbin/../../SWIM/workloadSuite/generatedWorkloads/st-FB2010_Proper_30node"
+export USER="ubuntu"
+export XDG_RUNTIME_DIR="/run/user/1000"
+export XDG_SESSION_ID="403"
+export YARN_LOG_DIR="/tmp/hadoop-ucare/logs/yarn"
+
+run
+
+sudo mount nfshost:/home/ubuntu /home/ubuntu
+
+if any node get detached again,

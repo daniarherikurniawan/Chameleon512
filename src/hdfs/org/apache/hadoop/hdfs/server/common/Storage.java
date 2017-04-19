@@ -455,7 +455,8 @@ public abstract class Storage extends StorageInfo {
         return StorageState.NOT_FORMATTED;
       if (startOpt != HdfsConstants.StartupOption.IMPORT) {
         //make sure no conversion is required
-        checkConversionNeeded(this);
+        //DAN: no need to upgrade
+        // checkConversionNeeded(this);
       }
 
       // check whether current directory is valid
