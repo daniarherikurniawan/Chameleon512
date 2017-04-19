@@ -23,9 +23,12 @@ echo
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export HADOOP_HOME=/home/ubuntu/hadoop
 
-# host=node-0.$projURI
 
+echo Clearing old data and daemons
+
+./bin/stop-all.sh
 rm -rf logs/
+./bin/stop-all.sh
 
 git pull ucare-github-dan master --depth=20
 
