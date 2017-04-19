@@ -38,3 +38,29 @@ git checkout conf/slaves
 git checkout conf/masters
 git pull ucare-github-dan master
 
+
+# //custom
+bin/stop-all.sh
+
+/bin/start-all.sh
+
+git pull ucare-github-dan master --depth=20
+git checkout master
+
+ant mvn-install
+
+git checkout conf/core-site.xml
+git checkout conf/hadoop-env.sh
+git checkout conf/hdfs-site.xml
+git checkout conf/mapred-site.xml
+git checkout conf/slaves
+git checkout conf/masters
+git pull ucare-github-dan master
+
+echo Y | bin/hadoop namenode -format 
+
+./bin/start-all.sh
+
+
+
+
