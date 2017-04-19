@@ -34,7 +34,7 @@
 
 	<property>
 	  <name>dfs.block.size</name>
-	  <value>1024</value>
+	  <value>4096</value>
 	  <!-- <value>67108864</value> -->
 	  <description>The default block size for new files.</description>
 	</property>
