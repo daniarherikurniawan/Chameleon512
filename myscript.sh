@@ -13,7 +13,7 @@ read numThreads
 echo  
 echo ================================================
 echo  
-
+# sudo apt-get install html2text
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export HADOOP_HOME=/home/ubuntu/hadoop
 
@@ -72,4 +72,5 @@ echo All done
 # wget node-0.ucare.edu:50070/dfsnodelist.jsp?whatNodes=LIVE
 # wget node-0.ucare.edu:50070/dfshealth.jsp
 # cat * | grep startTimeRefference
+# html2text dfsnodelist.jsp?whatNodes=LIVE.5 | less
 exit
