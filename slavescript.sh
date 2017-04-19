@@ -10,16 +10,19 @@
 rm -rf /tmp/hadoop-ucare/
 rm -rf /tmp/hadoop-core/
 
-cd ubuntu/
 sudo mount nfshost:/home/ubuntu /home/ubuntu
 
-cd 
+cd ~
+
+cd ubuntu/
 
 sudo mkdir -p /tmp/hadoop-ucare /tmp/hadoop-core 
 sudo chown -R $USER:ubuntu /tmp/hadoop-ucare /tmp/hadoop-core 
 sudo chmod -R 775 /tmp/hadoop-ucare /tmp/hadoop-core 
 
 sudo mount nfshost:/home/ubuntu /home/ubuntu
+
+cd ~
 
 cd ubuntu/
 
