@@ -7,13 +7,7 @@ echo                MY START SCRIPT
 echo ================================================
 echo Starting the script!
 
-echo What is the HDFS destination folder?
-read hdfsFolder
-
-echo How many copy of $hdfsFolder? "(5 for 50k blocks)"
-read numCopy
-
-echo How many threads of copyFromLocal? 
+echo How many nodes in this cluster? 
 read numThreads
 
 echo  
@@ -66,14 +60,6 @@ git pull ucare-github-dan master
 echo Y | bin/hadoop namenode -format 
 
 ./bin/start-all.sh
-
-# counter=0
-# while [ $counter -lt $numThreads ]
-# do
-# 	host=node-$counter
-# 	(echo "output from $host"; ssh $host 'bash -s' < mapredscript.sh $counter$hdfsFolder $numCopy) &
-# 	((counter++))
-# done
 
 # wait
 echo Cluster condition

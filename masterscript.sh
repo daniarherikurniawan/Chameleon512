@@ -47,6 +47,7 @@ bin/hadoop fsck -racks
 
 sudo mount nfshost:/home/ubuntu /home/ubuntu
 
+rm -rf /tmp/hadoop-ucare/
 
 # //custom
 echo Y | bin/hadoop namenode -format 
