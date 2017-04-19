@@ -23,6 +23,8 @@ echo
 echo ================================================
 echo  
 
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export HADOOP_HOME=/home/ubuntu/hadoop
 
 # host=node-0.$projURI
 
@@ -33,6 +35,17 @@ echo ...... Finished Starting DN and NN
 
 echo  
 echo ...... Starting $numThreads threads of HDFS write using copyFromLocal
+
+counter=1
+while [ $counter -lt $numThreads ]
+do
+	host=node-$counter
+	(echo "output from $host"; ssh $host 'bash -s' < slavescript.sh ) &
+	((counter++))
+done
+
+wait
+echo All subshells finished
 
 counter=0
 while [ $counter -lt $numThreads ]
