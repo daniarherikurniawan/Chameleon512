@@ -22,7 +22,7 @@ cd hadoop
 git init
 
 # Fetching codes from github
-git remote add ucare-github-dan https://github.com/daniarherikurniawan/hadoop-0.20.git
+git remote add ucare-github-dan https://github.com/daniarherikurniawan/Chameleon512.git
 git pull ucare-github-dan master --depth=20
 git checkout master
 
