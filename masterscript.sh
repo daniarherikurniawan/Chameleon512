@@ -8,7 +8,7 @@ export HADOOP_HOME=/home/ubuntu/hadoop
 
 # Prepare temp folder
 sudo mkdir -p /tmp/hadoop-ucare /tmp/hadoop-core 
-sudo chown -R $USER:cs331-uc /tmp/hadoop-ucare /tmp/hadoop-core 
+sudo chown -R $USER:ubuntu /tmp/hadoop-ucare /tmp/hadoop-core 
 sudo chmod -R 775 /tmp/hadoop-ucare /tmp/hadoop-core 
 
 DIR=/home/ubuntu/hadoop

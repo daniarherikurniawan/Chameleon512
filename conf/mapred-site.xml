@@ -6,7 +6,7 @@
 
 	<property>
 	  <name>mapred.job.tracker</name>
-	  <value>node-0.hadoopcluster.cs331-uc.emulab.net:54311</value>
+	  <value>node-0.ucare.edu:54311</value>
 	  <description>The host and port that the MapReduce job tracker runs
 	  at.  If "local", then jobs are run in-process as a single map
 	  and reduce task.

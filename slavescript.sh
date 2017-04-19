@@ -17,7 +17,7 @@ sudo chmod -R 775 /tmp/hadoop-ucare /tmp/hadoop-core
 # while [ $counter -lt $1 ]
 # do
 # 	( 
-# 		host=node-$counter.hadoopcluster.cs331-uc.emulab.net;
+# 		host=node-$counter.ucare.edu;
 # 		ssh-keygen -R $host;
 # 		ssh-keyscan $host >> ~/.ssh/known_hosts 
 # 	) &

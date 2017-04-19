@@ -14,7 +14,7 @@ rm list_ip.txt
 
 while [ $counter -le $maxNodes ]
 do
-	host=node-$counter.hadoopcluster.cs331-uc.emulab.net
+	host=node-$counter.ucare.edu
 	ip=$(ping -c1 -n $host | head -n1 | sed "s/.*(\([0-9]*\.[0-9]*\.[0-9]*\.[0-9]*\)).*/\1/g")
 	echo IP of $host = $ip
 	echo $ip >> list_ip.txt

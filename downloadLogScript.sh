@@ -13,7 +13,7 @@ read maxNodes
 rm -rf logs/
 mkdir logs/
 cd logs/
-project=hadoopcluster.cs331-uc.emulab.net
+project=ucare.edu
 host=http://node-0.$project:50070
 
 aria2c -x 16 -o NN.log $host/logs/hadoop-daniar-namenode-node-0.$project.log &

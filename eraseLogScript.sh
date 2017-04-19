@@ -7,7 +7,7 @@ echo ================================================
 echo How many nodes on this experiment?
 read maxNodes
 
-projURI=hadoopcluster.cs331-uc.emulab.net
+projURI=ucare.edu
 host=node-0.$projURI
 
 ssh $host 'bash -s' < eraseLog.sh $maxNodes
