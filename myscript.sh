@@ -34,15 +34,18 @@ export HADOOP_HOME=/home/ubuntu/hadoop
 echo ...... Finished Starting DN and NN
 
 echo  
-echo ...... Starting $numThreads threads of HDFS write using copyFromLocal
+echo ...... Starting $numThreads threads of clearing and preparring fresh /tmp/hadoop *
 
-counter=1
+counter=0
 while [ $counter -lt $numThreads ]
 do
 	host=node-$counter
-	(echo "output from $host"; ssh $host 'bash -s' < slavescript.sh )
+	(echo "working on $host"; ssh $host 'bash -s' < slavescript.sh ) &
 	((counter++))
 done
+
+wait
+echo All subshells finished
 
 # counter=0
 # while [ $counter -lt $numThreads ]
