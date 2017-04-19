@@ -40,12 +40,9 @@ counter=1
 while [ $counter -lt $numThreads ]
 do
 	host=node-$counter
-	(echo "output from $host"; ssh $host 'bash -s' < slavescript.sh ) &
+	(echo "output from $host"; ssh $host 'bash -s' < slavescript.sh )
 	((counter++))
 done
-
-wait
-echo All subshells finished
 
 counter=0
 while [ $counter -lt $numThreads ]
