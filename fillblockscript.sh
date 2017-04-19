@@ -13,7 +13,7 @@ read hdfsFolder
 echo How many copy of $hdfsFolder? "(5 for 50k blocks)"
 read numCopy
 
-echo How many threads of copyFromLocal? 
+echo How many threads of copyFromLocal? "(512 will do parallel on node-1 .. node-512"
 read numThreads
 
 echo  
@@ -24,8 +24,8 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export HADOOP_HOME=/home/ubuntu/hadoop
 
 
-counter=0
-while [ $counter -lt $numThreads ]
+counter=1
+while [ $counter -le $numThreads ]
 do
 	host=node-$counter
 	(echo "output from $host"; ssh $host 'bash -s' < mapredscript.sh $counter$hdfsFolder $numCopy) &
