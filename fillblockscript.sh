@@ -10,10 +10,10 @@ echo Starting the script!
 echo What is the HDFS destination folder?
 read hdfsFolder
 
-echo How many copy of $hdfsFolder? "(5 for 50k blocks)"
+echo How many copy of $hdfsFolder? "(5 for 50k blocks) => 3"
 read numCopy
 
-echo How many threads of copyFromLocal? "(512 will do parallel on node-1 .. node-512"
+echo How many threads of copyFromLocal? "(512 will do parallel on node-1 .. node-512 => 250"
 read numThreads
 
 echo  
@@ -33,8 +33,12 @@ do
 done
 
 wait
-echo Cluster condition
-bin/hadoop fsck -racks
+echo DONE!!!!
+cd logs/
+echo "" >  hadoop-ubuntu-namenode-node-0.log
+echo Done erasing NN logs!
+# echo Cluster condition
+# bin/hadoop fsck -racks
 
 echo 	$host:50070 
 echo 	$host:50030 
