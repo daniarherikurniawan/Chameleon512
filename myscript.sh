@@ -25,7 +25,7 @@ export HADOOP_HOME=/home/ubuntu/hadoop
 
 
 echo Clearing old data and daemons
-
+rm -rf dfsnodelist.jsp*
 ./bin/stop-all.sh
 rm -rf logs/
 ./bin/stop-all.sh
@@ -84,4 +84,5 @@ echo 	$host:50030
 
 echo All done
 # wget node-0.ucare.edu:50070/dfsnodelist.jsp?whatNodes=LIVE
+# wget node-0.ucare.edu:50070/dfshealth.jsp
 exit
