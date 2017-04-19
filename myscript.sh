@@ -85,4 +85,5 @@ echo 	$host:50030
 echo All done
 # wget node-0.ucare.edu:50070/dfsnodelist.jsp?whatNodes=LIVE
 # wget node-0.ucare.edu:50070/dfshealth.jsp
+# cat * | grep startTimeRefference
 exit
