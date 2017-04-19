@@ -7,9 +7,6 @@ echo                MY START SCRIPT
 echo ================================================
 echo Starting the script!
 
-echo How many nodes on this experiment?
-read maxNodes
-
 echo What is the HDFS destination folder?
 read hdfsFolder
 
