@@ -83,5 +83,5 @@ echo 	$host:50070
 echo 	$host:50030 
 
 echo All done
-
+# wget node-0.ucare.edu:50070/dfsnodelist.jsp?whatNodes=LIVE
 exit
