@@ -44,16 +44,16 @@ do
 	((counter++))
 done
 
-counter=0
-while [ $counter -lt $numThreads ]
-do
-	host=node-$counter
-	(echo "output from $host"; ssh $host 'bash -s' < mapredscript.sh $counter$hdfsFolder $numCopy) &
-	((counter++))
-done
+# counter=0
+# while [ $counter -lt $numThreads ]
+# do
+# 	host=node-$counter
+# 	(echo "output from $host"; ssh $host 'bash -s' < mapredscript.sh $counter$hdfsFolder $numCopy) &
+# 	((counter++))
+# done
 
-wait
-echo All subshells finished
+# wait
+# echo All subshells finished
 
 echo 	$host:50070 
 echo 	$host:50030 

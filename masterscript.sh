@@ -38,11 +38,23 @@ git checkout conf/slaves
 git checkout conf/masters
 git pull ucare-github-dan master
 
+echo Y | bin/hadoop namenode -format 
+
+# Start master node 
+./bin/start-all.sh
+
+bin/hadoop fsck -racks
+
+sudo mount nfshost:/home/ubuntu /home/ubuntu
+
 
 # //custom
+echo Y | bin/hadoop namenode -format 
+cd hadoop/
+rm -rf logs/
 bin/stop-all.sh
 
-/bin/start-all.sh
+./bin/start-all.sh
 
 git pull ucare-github-dan master --depth=20
 git checkout master

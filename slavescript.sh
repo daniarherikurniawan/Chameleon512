@@ -3,10 +3,14 @@
 
 # Set env variables
 
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-export HADOOP_HOME=/home/ubuntu/hadoop
+# export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+# export HADOOP_HOME=/home/ubuntu/hadoop
 
 # Prepare temp folder
+rm -rf /tmp/hadoop-ucare/
+rm -rf /tmp/hadoop-core/
+
+
 sudo mkdir -p /tmp/hadoop-ucare /tmp/hadoop-core 
 sudo chown -R $USER:ubuntu /tmp/hadoop-ucare /tmp/hadoop-core 
 sudo chmod -R 775 /tmp/hadoop-ucare /tmp/hadoop-core 
