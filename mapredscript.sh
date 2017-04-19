@@ -22,12 +22,12 @@ do
 	( 
 		bin/hadoop dfs -copyFromLocal $fileName $destination$counter;
 		echo Folder $fileName is copied to $destination$counter
-	) &
+	) 
 
 	((counter++))
 done
 
-wait
+# wait
 echo All subshells copying local files to hdfs are finished
 echo  
 echo ..... Finish saving $fileName files to HDFS
